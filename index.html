@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
+    <title>India's 79th Independence Day - code by prince Singh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="bharat.css">
+    <style>
+        /* Mobile-first responsive improvements */
+        @media (max-width: 640px) {
+            .hero-title { font-size: 2.5rem !important; }
+            .hero-subtitle { font-size: 1.5rem !important; }
+            .quiz-option { padding: 12px !important; }
+            .museum-item { padding: 20px !important; }
+            .timeline-item { flex-direction: column !important; text-align: center !important; }
+            .timeline-item .flex-1 { margin-top: 16px !important; }
+        }
+        
+        /* Touch-friendly buttons */
+        button, .quiz-option, .museum-item {
+            min-height: 44px;
+            touch-action: manipulation;
+        }
+        
+        /* Prevent horizontal scroll */
+        body { overflow-x: hidden; }
+        
+        /* Better text readability on mobile */
+        @media (max-width: 640px) {
+            p, span { font-size: 16px !important; line-height: 1.5 !important; }
+            h1, h2, h3 { line-height: 1.2 !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 overflow-x-hidden">
+    <!-- Fireworks Container -->
+    <div id="fireworks-container" class="fixed inset-0 pointer-events-none z-50"></div>
+    
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-green-600 rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">ACI</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">ACI Computer Institute</h1>
+                        <p class="text-sm text-gray-600">Maker, Saran, Bihar</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-gray-600">Coded by</p>
+                    <p class="font-semibold text-blue-600">Prince Singh</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full sparkle"></div>
+            <div class="absolute top-32 right-20 w-16 h-16 bg-orange-300 rounded-full sparkle" style="animation-delay: 0.5s;"></div>
+            <div class="absolute bottom-20 left-32 w-12 h-12 bg-green-300 rounded-full sparkle" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-40 right-10 w-24 h-24 bg-white rounded-full sparkle" style="animation-delay: 1.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="float mb-8">
+                <!-- Perfect Indian Flag with 24-spoke Ashoka Chakra -->
+                <div class="flag-animation mx-auto w-40 h-28 mb-8">
+                    <svg viewBox="0 0 300 200" class="w-full h-full shadow-2xl rounded-lg">
+                        <!-- Saffron -->
+                        <rect width="300" height="66.67" fill="#FF6B35"/>
+                        <!-- White -->
+                        <rect y="66.67" width="300" height="66.67" fill="#FFFFFF"/>
+                        <!-- Green -->
+                        <rect y="133.33" width="300" height="66.67" fill="#138808"/>
+                        
+                        <!-- Ashoka Chakra with 24 spokes -->
+                        <g class="ashoka-chakra" transform-origin="150 100">
+                            <circle cx="150" cy="100" r="25" fill="none" stroke="#000080" stroke-width="2"/>
+                            <circle cx="150" cy="100" r="2" fill="#000080"/>
+                            
+                            <!-- 24 spokes -->
+                            <g stroke="#000080" stroke-width="1.5" fill="#000080">
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(0 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(15 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(30 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(45 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(60 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(75 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(90 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(105 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(120 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(135 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(150 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(165 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(180 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(195 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(210 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(225 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(240 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(255 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(270 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(285 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(300 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(315 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(330 150 100)"/>
+                                <line x1="150" y1="75" x2="150" y2="125" transform="rotate(345 150 100)"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <h1 class="hero-title text-4xl sm:text-6xl md:text-8xl font-bold mb-6 text-white drop-shadow-2xl">
+                स्वतंत्रता दिवस
+            </h1>
+            <h2 class="hero-subtitle text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-xl">
+                Independence Day
+            </h2>
+            <div class="text-2xl md:text-3xl font-semibold text-white mb-8 drop-shadow-lg">
+                <p>15th August 2025</p>
+                <p class="text-xl">79th Celebration</p>
+            </div>
+            
+            <div class="bg-black bg-opacity-30 backdrop-blur-sm rounded-2xl p-8 mb-8 max-w-2xl mx-auto border border-white border-opacity-20">
+                <h3 class="text-2xl font-bold text-white mb-4">🎓 ACI Computer Institute</h3>
+                <p class="text-lg text-white font-semibold">Celebrating the spirit of freedom and technology</p>
+                <p class="text-white font-medium">Maker, Saran, Bihar</p>
+            </div>
+            
+            <button onclick="showUserForm()" class="bg-white text-orange-600 px-6 sm:px-8 py-4 rounded-full text-lg sm:text-xl font-bold hover:bg-orange-100 transition-all duration-300 transform hover:scale-105 shadow-2xl w-full sm:w-auto max-w-md">
+                🎆 Start Quiz Challenge 🎆
+            </button>
+        </div>
+    </section>
+
+    <!-- User Registration Form -->
+    <div id="user-form-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl">
+            <h2 class="text-3xl font-bold text-center mb-6 gradient-text">Join the Quiz!</h2>
+            <form id="user-form" class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Your Name</label>
+                    <input type="text" id="user-name" required class="w-full px-4 py-3 border-2 border-orange-300 rounded-xl focus:border-orange-500 focus:outline-none text-lg">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Your Village/City</label>
+                    <input type="text" id="user-village" required class="w-full px-4 py-3 border-2 border-green-300 rounded-xl focus:border-green-500 focus:outline-none text-lg">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-orange-500 to-green-500 text-white py-3 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-green-600 transition-all duration-300">
+                    Start Quiz Challenge! 🚀
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50 hidden">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold mb-4 gradient-text"> Independence Day Quiz </h2>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg">
+                        <p class="text-xl font-semibold text-gray-800">Welcome, <span id="quiz-user-name" class="text-orange-600"></span> from <span id="quiz-user-village" class="text-green-600"></span>!</p>
+                        <div class="mt-4 flex justify-center space-x-4 sm:space-x-8">
+                            <div class="text-center">
+                                <div class="text-xl sm:text-2xl font-bold text-blue-600" id="current-question">1</div>
+                                <div class="text-xs sm:text-sm text-gray-600">Question</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-xl sm:text-2xl font-bold text-green-600" id="current-score">0</div>
+                                <div class="text-xs sm:text-sm text-gray-600">Score</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-xl sm:text-2xl font-bold text-purple-600" id="time-left">30</div>
+                                <div class="text-xs sm:text-sm text-gray-600">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-container" class="bg-white rounded-3xl p-8 shadow-2xl">
+                    <div class="mb-8">
+                        <h3 id="question-text" class="text-2xl font-bold text-gray-800 mb-6"></h3>
+                        <div id="options-container" class="space-y-4"></div>
+                    </div>
+                    <div class="text-center">
+                        <button id="next-question" class="bg-gradient-to-r from-orange-500 to-green-500 text-white px-8 py-3 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-green-600 transition-all duration-300 hidden">
+                            Next Question →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results-section" class="py-20 bg-gradient-to-br from-yellow-50 to-orange-50 hidden">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="celebration-text mb-8">
+                    <h2 class="text-6xl font-bold mb-4 text-gray-800 drop-shadow-2xl">🎉 Quiz Complete! 🎉</h2>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-12 shadow-2xl mb-8 border-4 border-yellow-200">
+                    <div class="mb-8">
+                        <h3 class="text-4xl font-bold text-gray-800 mb-6">Your Final Score</h3>
+                        <div class="text-8xl font-bold text-green-600 mb-6 drop-shadow-lg" id="final-score">0</div>
+                        <div class="text-2xl text-gray-700 font-bold" id="score-message"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-orange-100 rounded-2xl p-6">
+                            <div class="text-3xl mb-2">🏆</div>
+                            <div class="text-lg font-bold text-orange-600">Rank</div>
+                            <div class="text-2xl font-bold text-gray-800" id="user-rank">#1</div>
+                        </div>
+                        <div class="bg-green-100 rounded-2xl p-6">
+                            <div class="text-3xl mb-2">✅</div>
+                            <div class="text-lg font-bold text-green-600">Correct</div>
+                            <div class="text-2xl font-bold text-gray-800" id="correct-answers">0</div>
+                        </div>
+                        <div class="bg-blue-100 rounded-2xl p-6">
+                            <div class="text-3xl mb-2">⚡</div>
+                            <div class="text-lg font-bold text-blue-600">Speed</div>
+                            <div class="text-2xl font-bold text-gray-800" id="avg-time">0s</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="shareScore()" class="bg-gradient-to-r from-orange-500 to-green-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-green-600 transition-all duration-300 mr-4">
+                    Share Your Score 📱
+                </button>
+                <button onclick="restartQuiz()" class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                    Take Quiz Again 🔄
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Leaderboard -->
+    <section class="py-20 bg-gradient-to-br from-purple-900 to-blue-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">🏆 Live Leaderboard 🏆</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8">
+                    <div id="leaderboard-container" class="space-y-4">
+                        <!-- Leaderboard entries will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freedom Fighters Section -->
+    <section class="py-20 bg-gradient-to-br from-orange-50 to-green-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 text-gray-800 drop-shadow-lg">Our Heroes </h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
+                <div class="card-hover bg-white rounded-3xl p-8 text-center shadow-2xl border-4 border-orange-200">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-5xl shadow-xl">
+                        🦁
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800">Mahatma Gandhi</h3>
+                    <p class="text-lg text-gray-700 font-semibold leading-relaxed">Father of the Nation, lead India to independence through non-violence and truth</p>
+                    <div class="mt-4 text-sm text-orange-600 font-bold">1869 - 1948</div>
+                </div>
+                
+                <div class="card-hover bg-white rounded-3xl p-8 text-center shadow-2xl border-4 border-blue-200">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-5xl shadow-xl">
+                        ⚔️
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800">Subhas Chandra Bose</h3>
+                    <p class="text-lg text-gray-700 font-semibold leading-relaxed">Netaji, formed Indian National Army and fought bravely for freedom</p>
+                    <div class="mt-4 text-sm text-blue-600 font-bold">1897 - 1945</div>
+                </div>
+                
+                <div class="card-hover bg-white rounded-3xl p-8 text-center shadow-2xl border-4 border-green-200">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-5xl shadow-xl">
+                        🌹
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-800">Bhagat Singh</h3>
+                    <p class="text-lg text-gray-700 font-semibold leading-relaxed">Revolutionary hero who sacrificed his life for freedom at just 23 years</p>
+                    <div class="mt-4 text-sm text-green-600 font-bold">1907 - 1931</div>
+                </div>
+            </div>
+            
+            <!-- More Heroes -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-3xl">
+                        👑
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-800">Rani Lakshmibai</h4>
+                    <p class="text-sm text-gray-600 font-medium">Queen of Jhansi, warrior queen</p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center text-3xl">
+                        🗡️
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-800">Chandrashekhar Azad</h4>
+                    <p class="text-sm text-gray-600 font-medium">Revolutionary freedom fighter</p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-pink-400 to-pink-600 rounded-full flex items-center justify-center text-3xl">
+                        🌸
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-800">Sarojini Naidu</h4>
+                    <p class="text-sm text-gray-600 font-medium">Nightingale of India</p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-3xl">
+                        📚
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-800">Dr. APJ Abdul Kalam</h4>
+                    <p class="text-sm text-gray-600 font-medium">People's President, Missile Man</p>
+                </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="py-20 bg-gradient-to-r from-orange-50 to-green-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 text-gray-800 drop-shadow-lg">🕰️ Journey to Freedom 🕰️</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="space-y-8">
+                    <div class="timeline-item flex items-center space-x-6 p-8 bg-white rounded-3xl shadow-2xl card-hover border-l-8 border-orange-500">
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-xl">
+                            1857
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">First War of Independence</h3>
+                            <p class="text-lg text-gray-600 font-medium">The Sepoy Mutiny marked the beginning of organized resistance against British rule</p>
+                        </div>
+                        <div class="text-6xl">⚔️</div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-center space-x-6 p-8 bg-white rounded-3xl shadow-2xl card-hover border-l-8 border-blue-500">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-xl">
+                            1920
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Non-Cooperation Movement</h3>
+                            <p class="text-lg text-gray-600 font-medium">Gandhi's peaceful resistance gained massive momentum across the nation</p>
+                        </div>
+                        <div class="text-6xl">🕊️</div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-center space-x-6 p-8 bg-white rounded-3xl shadow-2xl card-hover border-l-8 border-purple-500">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-xl">
+                            1930
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Salt March (Dandi March)</h3>
+                            <p class="text-lg text-gray-600 font-medium">Gandhi's 240-mile march to the sea to make salt, defying British law</p>
+                        </div>
+                        <div class="text-6xl">🧂</div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-center space-x-6 p-8 bg-white rounded-3xl shadow-2xl card-hover border-l-8 border-red-500">
+                        <div class="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-xl">
+                            1942
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Quit India Movement</h3>
+                            <p class="text-lg text-gray-600 font-medium">The final push for independence with the slogan "Do or Die"</p>
+                        </div>
+                        <div class="text-6xl">✊</div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-center space-x-6 p-8 bg-gradient-to-r from-orange-500 to-green-500 rounded-3xl shadow-2xl card-hover border-l-8 border-yellow-500">
+                        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-orange-600 font-bold text-xl shadow-xl">
+                            1947
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-2">Independence Day! 🎉</h3>
+                            <p class="text-lg text-white font-medium">India finally achieved freedom on 15th August 1947 - Tryst with Destiny!</p>
+                        </div>
+                        <div class="text-6xl">🇮🇳</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Museum -->
+    <section class="py-20 bg-gradient-to-br from-indigo-900 to-purple-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 text-white drop-shadow-lg">🏛️ Virtual Independence Museum 🏛️</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="museum-item bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 card-hover cursor-pointer" onclick="openMuseumItem('flag')">
+                    <div class="text-6xl mb-4 text-center">🇮🇳</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">National Flag</h3>
+                    <p class="text-white text-center font-medium">Discover the story behind our Tricolor</p>
+                </div>
+                
+                <div class="museum-item bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 card-hover cursor-pointer" onclick="openMuseumItem('anthem')">
+                    <div class="text-6xl mb-4 text-center">🎵</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">National Anthem</h3>
+                    <p class="text-white text-center font-medium">Learn about Jana Gana Mana</p>
+                </div>
+                
+                <div class="museum-item bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 card-hover cursor-pointer" onclick="openMuseumItem('symbols')">
+                    <div class="text-6xl mb-4 text-center">🦚</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">National Symbols</h3>
+                    <p class="text-white text-center font-medium">Explore India's national symbols</p>
+                </div>
+                
+                <div class="museum-item bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 card-hover cursor-pointer" onclick="openMuseumItem('freedom')">
+                    <div class="text-6xl mb-4 text-center">📜</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Freedom Struggle</h3>
+                    <p class="text-white text-center font-medium">Journey of our independence</p>
+                </div>
+                
+                <div class="museum-item bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 card-hover cursor-pointer" onclick="openMuseumItem('constitution')">
+                    <div class="text-6xl mb-4 text-center">⚖️</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Constitution</h3>
+                    <p class="text-white text-center font-medium">The foundation of our democracy</p>
+                </div>
+                
+                <div class="museum-item bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 card-hover cursor-pointer" onclick="openMuseumItem('culture')">
+                    <div class="text-6xl mb-4 text-center">🎭</div>
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">Unity in Diversity</h3>
+                    <p class="text-white text-center font-medium">Celebrating our rich culture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Museum Modal -->
+    <div id="museum-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-3xl p-8 max-w-4xl w-full mx-4 shadow-2xl max-h-96 overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 id="museum-title" class="text-3xl font-bold text-gray-800"></h2>
+                <button onclick="closeMuseumItem()" class="text-4xl text-gray-500 hover:text-gray-700">×</button>
+            </div>
+            <div id="museum-content" class="text-lg text-gray-700 leading-relaxed"></div>
+        </div>
+    </div>
+
+    <!-- Patriotic Quotes Carousel -->
+    <section class="py-20 bg-gradient-to-r from-red-50 to-yellow-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 text-gray-800 drop-shadow-lg">💭 Inspiring Quotes 💭</h2>
+            <div class="max-w-4xl mx-auto">
+                <div id="quotes-carousel" class="bg-white rounded-3xl p-12 shadow-2xl text-center border-4 border-orange-200">
+                    <div class="text-6xl mb-6" id="quote-icon">🇮🇳</div>
+                    <blockquote class="text-2xl font-bold text-gray-800 mb-6 italic" id="quote-text">
+                        "Freedom is not worth having if it does not include the freedom to make mistakes."
+                    </blockquote>
+                    <cite class="text-xl text-orange-600 font-semibold" id="quote-author">- Mahatma Gandhi</cite>
+                </div>
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button onclick="previousQuote()" class="bg-orange-500 text-white px-6 py-3 rounded-full font-bold hover:bg-orange-600 transition-all duration-300">← Previous</button>
+                    <button onclick="nextQuote()" class="bg-green-500 text-white px-6 py-3 rounded-full font-bold hover:bg-green-600 transition-all duration-300">Next →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Statistics Dashboard -->
+    <section class="py-20 bg-gradient-to-br from-blue-900 to-indigo-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-16 text-white drop-shadow-lg">📊 India Today - Live Stats 📊</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+                <div class="stat-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 text-center">
+                    <div class="text-5xl mb-4">🏛️</div>
+                    <div class="text-4xl font-bold text-yellow-300 mb-2" id="states-count">28</div>
+                    <div class="text-white font-semibold">States</div>
+                </div>
+                
+                <div class="stat-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 text-center">
+                    <div class="text-5xl mb-4">🗣️</div>
+                    <div class="text-4xl font-bold text-green-300 mb-2" id="languages-count">22</div>
+                    <div class="text-white font-semibold">Official Languages</div>
+                </div>
+                
+                <div class="stat-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 text-center">
+                    <div class="text-5xl mb-4">👥</div>
+                    <div class="text-4xl font-bold text-blue-300 mb-2" id="population-count">1.4B+</div>
+                    <div class="text-white font-semibold">Population</div>
+                </div>
+                
+                <div class="stat-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 text-center">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <div class="text-4xl font-bold text-purple-300 mb-2" id="literacy-count">77.7%</div>
+                    <div class="text-white font-semibold">Literacy Rate</div>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="achievement-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 text-center">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Space Missions</h3>
+                    <p class="text-white font-medium">Mars Orbiter Mission, Chandrayaan, and more!</p>
+                </div>
+                
+                <div class="achievement-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 text-center">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Digital India</h3>
+                    <p class="text-white font-medium">Leading in IT services and digital innovation</p>
+                </div>
+                
+                <div class="achievement-card bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 text-center">
+                    <div class="text-5xl mb-4">🌱</div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Green Energy</h3>
+                    <p class="text-white font-medium">World's 4th largest renewable energy capacity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACI Institute Tribute -->
+    <section class="py-20 bg-gradient-to-br from-blue-900 to-purple-900">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl font-bold text-white mb-8 drop-shadow-lg">🎓 ACI Computer Institute 🎓</h2>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-12 mb-8 border border-white border-opacity-20">
+                    <h3 class="text-4xl font-bold text-white mb-6">Empowering Digital India</h3> <br>
+                    <p class="text-xl text-white mb-6 font-medium leading-relaxed">
+                        स्वतंत्रता दिवस की हार्दिक शुभकामनाएँ!! <br><br> <br>
+
+आज 15 अगस्त के पावन अवसर पर हम सभी अपने देश की आज़ादी और वीर शहीदों के बलिदान को नमन करते हैं।
+ACI Computer Institute का संकल्प है "Empowering Digital India" —
+हर गाँव, हर कस्बे के युवाओं को डिजिटल ज्ञान और तकनीकी कौशल से सशक्त बनाना,
+ताकि वे आत्मनिर्भर भारत के निर्माण में अपना योगदान दे सकें। <br><br><br>
+
+🎓 हम प्रदान करते हैं —
+💻 ADCA | DCA | Tally | DFA | CCA | More...
+📍 Maker, Chhapra Road (Bypass), Saran
+📞 9576737726 | 8540858926 <br> <br>
+
+आइए, आज के दिन यह प्रण लें कि जैसे हमारे वीरों ने हमें आज़ादी दिलाई,
+वैसे ही हम ज्ञान और तकनीक से भारत को दुनिया में सबसे आगे ले जाएंगे।
+<br><br>
+✨ जय हिंद! ✨
+                    </p>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8">
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-6 card-hover">
+                            <div class="text-5xl mb-4">💻</div>
+                            <h4 class="text-xl font-bold text-white">Modern Education</h4>
+                            <p class="text-white text-sm mt-2">Latest technology and curriculum</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-6 card-hover">
+                            <div class="text-5xl mb-4">🚀</div>
+                            <h4 class="text-xl font-bold text-white">Future Ready</h4>
+                            <p class="text-white text-sm mt-2">Preparing students for tomorrow</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-6 card-hover">
+                            <div class="text-5xl mb-4">🌟</div>
+                            <h4 class="text-xl font-bold text-white">Excellence</h4>
+                            <p class="text-white text-sm mt-2">Committed to quality education</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4"> Jai Hind! </h3>
+                <p class="text-lg font-semibold">Happy 79th Independence Day</p>
+                <p class="text-gray-400">15th August 2025</p>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="font-semibold">ACI Computer Institute, Maker, Saran</p>
+                        <p class="text-gray-400">Building Digital India</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-sm text-gray-400">Designed & Developed with ❤️ by</p>
+                        <p class="font-bold text-blue-400 text-lg">Prince Singh</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Developed by + Instagram -->
+<div class="floating-credit">
+    <p>Developed by Prince Singh</p>
+    <a href="https://instagram.com/priince_.singh" target="_blank" class="insta-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+</div>
+
+    </footer>
+
+    <script src="prince.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f27fb5650cb22e',t:'MTc1NTE5NTk2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
